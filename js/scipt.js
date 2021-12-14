@@ -7,8 +7,8 @@ $(document).on('click', '.search-cancel', function() {
     $('.search-bar').removeClass('search-bar-active')
 });
 //Funksion per log in dhe sign up 
-$(document).on('click', '.user.already-account', function() {
-    $('.form').addClass('login-active').removeClass('login-active')
+$(document).on('click', '.user,.already-account', function() {
+    $('.form').addClass('login-active').removeClass('sign-up-active')
 });
 
 $(document).on('click', '.sign-up-btn', function() {

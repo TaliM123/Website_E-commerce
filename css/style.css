@@ -225,7 +225,7 @@ nav {
 }
 
 .login-form form,
-.sign-up-form {
+.sign-up-form form {
     display: flex;
     justify-self: center;
     align-items: center;
