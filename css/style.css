@@ -1,81 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: poppins;
     background-color: #ffff;
-
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-ul{
+
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-nav{
+
+nav {
     width: 100%;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
     z-index: 100;
 }
-.social-call{
+
+.social-call {
     height: 40px;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: center;
     text-align: center;
 }
-.social a{
+
+.social a {
     margin: 0px 5px;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0, 0, 0, 0.7);
     font-size: 0.9rem;
 }
-.phone{
-    color: rgba(0,0,0,0.7);
+
+.phone {
+    color: rgba(0, 0, 0, 0.7);
     margin-left: 30px;
     font-size: 0.9rem;
 }
-.social a:hover{
-    color:  #0b946a;
+
+.social a:hover {
+    color: #0b946a;
     transition: all ease 0.3s;
 }
-.navigation{
+
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 45px;
 }
-.logo img{
+
+.logo img {
     height: 30px;
 }
-.menu{
+
+.menu {
     display: flex;
 }
-.menu li{
+
+.menu li {
     position: relative;
     margin: 20px;
     display: flex;
     text-transform: uppercase;
     font-weight: 500;
 }
-.menu li a{
+
+.menu li a {
     color: #5555;
 }
-.right-menu a{
+
+.right-menu a {
     margin: 0px 10px;
     font-size: 1.2rem;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
+
 .menu a:hover,
 .right-menu a:hover,
 .search-cancel:hover,
-.form-cancel:hover{
+.form-cancel:hover {
     color: #0b946a;
     transition: all ease 0.3s;
 }
-.sale-label{
+
+.sale-label {
     width: 38px;
     height: 17px;
     background-color: #f76b6a;
@@ -90,7 +105,8 @@ nav{
     top: -20px;
     right: -20px;
 }
-.sale-label:after{
+
+.sale-label:after {
     content: '';
     width: 0px;
     height: 0px;
@@ -102,10 +118,12 @@ nav{
     left: 10%;
     top: 100%;
 }
-.fa-shopping-cart{
+
+.fa-shopping-cart {
     position: relative;
 }
-.num-cart-product{
+
+.num-cart-product {
     position: absolute;
     top: -17px;
     right: -17px;
@@ -120,7 +138,8 @@ nav{
     align-items: center;
     font-weight: 400;
 }
-.search-bar{
+
+.search-bar {
     width: 100%;
     height: 300px;
     background-color: #ffff;
@@ -129,11 +148,12 @@ nav{
     bottom: 0px;
     display: flex;
     justify-content: center;
-    box-shadow: 2px -5px 30px rgba(0,0,0,0.1);
+    box-shadow: 2px -5px 30px rgba(0, 0, 0, 0.1);
     z-index: 101;
     animation: search 0.5s;
 }
-.search-input{
+
+.search-input {
     width: 90%;
     border-bottom: 2px solid #5555;
     display: flex;
@@ -142,7 +162,8 @@ nav{
     height: 100px;
     margin-top: 20px;
 }
-.search-bar input{
+
+.search-bar input {
     width: 100%;
     padding: 30px;
     border: none;
@@ -151,44 +172,50 @@ nav{
     margin: 20px;
     padding: 0px 20px;
 }
-.search-cancel{
+
+.search-cancel {
     color: #272727;
     font-size: 2rem;
     padding-right: 40px;
 }
-.search-bar{
+
+.search-bar {
     display: none;
 }
-.search-bar-active{
+
+.search-bar-active {
     display: flex;
 }
-@keyframes search{
-    0%{
+
+@keyframes search {
+    0% {
         bottom: -300px;
     }
-    100%{
+    100% {
         bottom: 0px;
     }
 }
-.form{
+
+.form {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     z-index: 102;
 }
+
 .login-form,
-.sign-up-form{
+.sign-up-form {
     width: 420px;
     padding: 20px 10px;
     background-color: #ffff;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,16 +223,18 @@ nav{
     border-radius: 5px;
     position: relative;
 }
+
 .login-form form,
-.sign-up-form{
+.sign-up-form {
     display: flex;
     justify-self: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
 }
+
 .login-form strong,
-.sign-up-form strong{
+.sign-up-form strong {
     color: #272727;
     font-size: 2rem;
     margin: 2px 7px 7px 7px;
@@ -213,22 +242,25 @@ nav{
     letter-spacing: 0.5px;
     font-weight: 500;
 }
+
 .login-form input,
-.sign-up-form input{
+.sign-up-form input {
     width: 90%;
     height: 45px;
-    margin: 6px  0px;
+    margin: 6px 0px;
     padding: 0px 10px;
-    border:1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     outline: none;
     border-radius: 7px;
 }
+
 .login-form input::placeholder,
-.sign-up-form input::placeholder{
-    color: rgba(0,0,0,0.5);
+.sign-up-form input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
 }
+
 .login-form input[type="submit"],
-.sign-up-form input[type="submit"]{
+.sign-up-form input[type="submit"] {
     background-color: #0b9d8a;
     color: #ffffff;
     border: none;
@@ -236,50 +268,126 @@ nav{
     text-transform: uppercase;
     margin-top: 10px;
     border-radius: 3px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 }
-.form-buttons{
+
+.form-buttons {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
 }
-.form-buttons a{
+
+.form-buttons a {
     color: #4d4d4d;
     font-size: 0.9rem;
 }
-.sign-up-button{
+
+.sign-up-button {
     border-bottom: 1px solid #868686;
     line-height: 16px;
 }
-.form-cancel{
+
+.form-cancel {
     position: absolute;
     right: 20px;
     top: 10px;
     color: #868686;
 }
+
 .login-form,
 .sign-up-form,
-.form{
+.form {
     display: none;
 }
+
 .login-active,
-.login-active .login-form{
+.login-active .login-form {
     display: flex;
     animation: fade 0.3s;
 }
 
 .sign-up-active,
-.sign-up-active .sign-up-form{
+.sign-up-active .sign-up-form {
     display: flex;
     animation: fade 0.3s;
 }
-@keyframes fade{
-    0%{
+
+@keyframes fade {
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
+}
+
+.full-slider-box {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.f-slide-1 {
+    background-image: url(../img/Slider01.png);
+}
+
+.f-slide-2 {
+    background-image: url(../img/Slider01.png);
+}
+
+.f-slide-3 {
+    background-image: url(../img/Slider01.png);
+}
+
+.slider-text-container {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.f-slider-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.f-slider-text strong {
+    color: #333333;
+    font-size: 3rem;
+    line-height: 55px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.f-slider-text span {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 500;
+    color: #6666;
+    font-size: 1.2rem;
+}
+
+.f-slider-btn {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    background-color: #0b9d8a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.f-slider-text strong font {
+    color: #0b9d8a;
 }
