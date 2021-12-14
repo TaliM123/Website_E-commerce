@@ -29,3 +29,14 @@ $(document).ready(function() {
         loop: true
     });
 });
+
+//Feature Slider - Slideri per Maicat ose produktet tjera qe jan ne dispozicion
+$(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth: true,
+        loop: true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        }
+    });
+});
