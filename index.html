@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Shopping Website</title>
@@ -100,10 +101,10 @@
                 <a href="#" class="sign-up-btn">Create account</a>
             </div>
         </div>
-         
-        
+
+
         <!--Sign-up------->
-         <div class="sign-up-form">
+        <div class="sign-up-form">
             <!---butoni-cancel-->
             <a href="#" class="form-cancel">
                 <i class="fas fa-times"> </i>
@@ -121,7 +122,7 @@
             <!--butoni-forget-dhe-sign-up-->
             <div class="form-buttons">
                 <a href="#" class="already-account">Already have an account?</a>
-               
+
             </div>
         </div>
 
@@ -132,7 +133,31 @@
     <!--JQuery--------->
     <script src="js/jQuery.js"></script>
     <!--Script------>
-    <script src="js/scipt.js"></script>
+    <script src="js/scipt.js">
+        //Funksion per search bar , ne klikim te ikones hapet search bari
+    $(document).on('click', '.search', function () {
+        $('.search-bar').addClass('search-bar-active')
+    });
+    //Funksion per search bar, pasi qe eshte hapur search bar ne klikimin e butonit x mbullet ai
+    $(document).on('click', '.search-cancel', function () {
+        $('.search-bar').removeClass('search-bar-active')
+    });
+    //Funksion per log in dhe sign up 
+    $(document).on('click', '.user,.already-account', function () {
+        $('.form').addClass('login-active').removeClass('sign-up-active')
+    });
+
+
+    $(document).on('click', '.sign-up-btn', function () {
+        $('.form').addClass('sign-up-active').removeClass('login-active')
+    });
+
+
+    $(document).on('click', '.form-cancel', function () {
+        $('.form').removeClass('login-active').removeClass('sign-up-active')
+    });
+    </script>
+  
 </body>
 
 </html>
