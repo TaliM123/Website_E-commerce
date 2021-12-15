@@ -406,6 +406,20 @@ nav {
     border: 1px solid #e0e0e0;
 }
 
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #1b1919;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 30px;
+    border: 1px solid #e0e0e0;
+    background-image: url(../img/Test1.jpg);
+}
+
 .feature-box {
     width: 155px;
     height: 155px;
@@ -603,6 +617,10 @@ nav {
 .banner-box {
     height: 40vh;
     margin: 20px 0px;
+}
+
+.banner-foto-man-clothes {
+    background-image: url(../img/MenClothing-Banner.jpg);
 }
 
 .services {
