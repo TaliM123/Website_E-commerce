@@ -417,7 +417,18 @@ nav {
     font-weight: 600;
     padding: 5px 30px;
     border: 1px solid #e0e0e0;
-    background-image: url(../img/Test1.jpg);
+}
+
+.man {
+    background-image: url(../img/mans-background-template.jpg);
+}
+
+.women {
+    background-image: url(../img/Womens-background-template.jpg);
+}
+
+.kids {
+    background-image: url(../img/kids-background-template.jpg);
 }
 
 .feature-box {
@@ -621,6 +632,14 @@ nav {
 
 .banner-foto-man-clothes {
     background-image: url(../img/MenClothing-Banner.jpg);
+}
+
+.banner-foto-women-clothes {
+    background-image: url(../img/women-banner.jpg);
+}
+
+.banner-foto-kids-clothes {
+    background-image: url(../img/kids-banner.png);
 }
 
 .services {
