@@ -40,3 +40,13 @@ $(document).ready(function() {
         }
     });
 });
+
+// Per fix menu gjate levizjes ne faqe rrin gjithmon ne top dhe kur preket ikona e search ose login
+//nuk del ne fillin te faqes pra ndreq kete error
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+        $('.navigation').addClass('fix-nav');
+    } else {
+        $('.navigation').removeClass('fix-nav');
+    }
+});

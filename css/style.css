@@ -336,7 +336,7 @@ nav {
 }
 
 .f-slide-1 {
-    background-image: url(../img/Slider01.png);
+    background-image: url(../img/Slider02.jpg);
 }
 
 .f-slide-2 {
@@ -452,23 +452,26 @@ nav {
     margin: 10px auto 40px auto;
 }
 
-.arrival-heading{
+.arrival-heading {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.arrival-heading strong{
+
+.arrival-heading strong {
     color: #ffffff;
     background-color: #202020;
     font-weight: 500;
 }
-.arrival-heading p{
+
+.arrival-heading p {
     color: #808080;
     margin: 10px;
     font-size: 0.9rem;
 }
-.product-container{
+
+.product-container {
     width: 90%;
     display: flex;
     justify-content: center;
@@ -476,7 +479,8 @@ nav {
     flex-wrap: wrap;
     margin-top: 20px;
 }
-.product-box{
+
+.product-box {
     display: flex;
     flex-grow: 0.5;
     flex-direction: column;
@@ -486,20 +490,22 @@ nav {
     margin: 20px;
 }
 
-.product-img{
+.product-img {
     width: 200px;
     height: 210px;
     margin: 20px;
     cursor: pointer;
     position: relative;
 }
-.product-img img{
+
+.product-img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
 }
-.product-details{
+
+.product-details {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -507,18 +513,22 @@ nav {
     padding: 10px 20px;
     border-top: 1px solid #f3f3f3;
 }
-.p-name{
+
+.p-name {
     color: #727272;
 }
-.p-price{
+
+.p-price {
     color: #333333;
     font-size: 1.2rem;
     font-weight: 400;
 }
-.product-box:hover{
+
+.product-box:hover {
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 }
-.add-cart{
+
+.add-cart {
     position: absolute;
     right: -20px;
     top: 10px;
@@ -534,20 +544,24 @@ nav {
     display: none;
     animation: fade 0.3s;
 }
-.add-cart:hover{
+
+.add-cart:hover {
     background-color: #f76b6a;
     transition: all ease 0.2s;
 }
-.product-box:hover .add-cart{
+
+.product-box:hover .add-cart {
     display: flex;
 }
-.new-arrival{
+
+.new-arrival {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.sale{
+
+.sale {
     width: 95%;
     display: flex;
     justify-content: center;
@@ -555,37 +569,125 @@ nav {
     flex-wrap: wrap;
     margin: 20px auto;
 }
-.sale-box{
+
+.sale-box {
     width: 280px;
     border-radius: 20px;
     margin: 20px;
     position: relative;
     flex-grow: 0.5;
 }
-.sale-box img{
+
+.sale-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center right;
 }
-.sale-text{
+
+.sale-text {
     position: absolute;
     left: 20%;
     top: 50%;
-    transform: translate(-20%,-50%);
+    transform: translate(-20%, -50%);
     display: flex;
     flex-direction: column;
 }
-.sale-box a{
+
+.sale-box a {
     color: #1b1919;
 }
-.sale-text strong{
+
+.sale-text strong {
     font-size: 1.2rem;
     font-weight: 500;
     width: 80%;
     line-height: 23px;
 }
-.banner-box{
+
+.banner-box {
     height: 40vh;
     margin: 20px 0px;
+}
+
+.services {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    padding: 20px;
+    margin: 15px;
+    flex-grow: 0.7;
+}
+
+.services-box i {
+    color: #0b9d8a;
+    font-size: 2rem;
+    margin: 15px;
+}
+
+.services-box span {
+    color: #222222;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+}
+
+.services-box p {
+    color: #878787;
+    margin: 0px;
+    font-size: 0.9rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #4e4e4e;
+    letter-spacing: 1px;
+}
+
+.subscribe input {
+    width: 240px;
+    height: 43px;
+    padding: 0px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+}
+
+.subscribe input[type="sumbit"] {
+    width: 120px;
+    background-color: #0b9d8a;
+    color: #ffffff;
+    margin: 0px 5px;
+}
+
+.fix-nav {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+    z-index: 102;
 }
