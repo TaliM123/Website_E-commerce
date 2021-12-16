@@ -56,6 +56,16 @@ nav {
     padding: 0px 45px;
 }
 
+.fix-nav {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+    z-index: 102;
+}
+
 .logo img {
     height: 30px;
 }
@@ -306,6 +316,11 @@ nav {
 
 /*-------------------------------------------------------------------------------------*/
 
+#adaptive {
+    padding-left: 0;
+    margin-top: 0;
+}
+
 .full-slider-box,
 .banner-box {
     width: 100%;
@@ -336,6 +351,7 @@ nav {
     height: 90%;
     display: flex;
     align-items: center;
+    padding-left: 70px;
 }
 
 .f-slider-text,
@@ -380,6 +396,88 @@ nav {
 .f-slider-text strong font,
 .banner-text strong font {
     color: #0b9d8a;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .2
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .2
+    }
+    to {
+        opacity: 1
+    }
 }
 
 
@@ -718,14 +816,4 @@ footer {
     background-color: #0b9d8a;
     color: #ffffff;
     margin: 0px 5px;
-}
-
-.fix-nav {
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
-    z-index: 102;
 }
