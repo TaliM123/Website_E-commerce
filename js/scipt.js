@@ -19,8 +19,6 @@ $(document).on('click', '.form-cancel', function() {
     $('.form').removeClass('login-active').removeClass('sign-up-active')
 });
 
-//Validimi i Log in dhe Sign up formes
-
 // Per fix menu gjate levizjes ne faqe rrin gjithmon ne top dhe kur preket ikona e search ose login
 //nuk del ne fillin te faqes pra ndreq kete error
 $(window).scroll(function() {

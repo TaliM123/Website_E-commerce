@@ -35,10 +35,10 @@
             <!--menu-->
             <ul class="menu">
                 <li><a href="#">Home</a></li>
-                <li><a href="Men.html">Men's</a></li>
-                <li><a href="Women.html">Women's</a></li>
-                <li><a href="Kids.html">Children's</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="Men.html">Men</a></li>
+                <li><a href="Women.html">Women</a></li>
+                <li><a href="Kids.html">Children</a></li>
+                <li><a href="#">Shop</a></li>
             </ul>
 
 
@@ -86,9 +86,7 @@
             <strong>Log In</strong>
             <!---inputet-->
             <form name="registration" onsubmit="return validateLogin(this)">
-                <p id="emailVal1"></p>
                 <input type="email" id="email01" placeholder="Example@gmail.com" name="email" required>
-                <p id="passwordVal1"></p>
                 <input type="password" id="pass01" placeholder="Password" name="password" required>
                 <!--butoni-submit-->
                 <input type="submit" value="Log In">
@@ -110,10 +108,10 @@
             <!--heading-->
             <strong>Sign Up</strong>
             <!---inputet-->
-            <form>
-                <input type="text" placeholder="Full Name" name="fullname" required>
-                <input type="email" placeholder="Example@gmail.com" name="email" required>
-                <input type="password" placeholder="Password" name="password" required>
+            <form name="sing-up" onsubmit="return validateCreateAccount(this)">
+                <input type="text" id="name02" placeholder="Full Name" name="fullname" required>
+                <input type="email" id="email02" placeholder="Example@gmail.com" name="email" required>
+                <input type="password" id="pass02" placeholder="Password" name="password" required>
                 <!--butoni-submit-->
                 <input type="submit" value="Sign Up">
             </form>
@@ -427,8 +425,8 @@
             <!---text-->
             <a href="#">
                 <div class="sale-text">
-                    <strong>Bag with rose pattern</strong>
-                    <span>Sale off 25%</span>
+                    <strong></strong>
+                    <span></span>
                 </div>
             </a>
         </div>
@@ -439,8 +437,8 @@
             <!---text-->
             <a href="#">
                 <div class="sale-text">
-                    <strong>Bag with rose pattern</strong>
-                    <span>Sale off 25%</span>
+                    <strong></strong>
+                    <span></span>
                 </div>
             </a>
         </div>
@@ -451,8 +449,8 @@
             <!---text-->
             <a href="#">
                 <div class="sale-text">
-                    <strong>Bag with rose pattern</strong>
-                    <span>Sale off 25%</span>
+                    <strong></strong>
+                    <span></span>
                 </div>
             </a>
         </div>
@@ -550,11 +548,6 @@
         <div class="banner-box f-slide-1">
             <!--Slider text container-->
             <div class="banner-container">
-                <div class="banner-text">
-                    <span>Limited Offer</span>
-                    <strong>25% off<br/> with <font>promo code</font></strong>
-                    <a href="#" class="banner-btn">Shop Now</a>
-                </div>
             </div>
         </div>
     </section>
@@ -588,12 +581,6 @@
         <span class="copyright">
             Copyright 2021 - Taulant / Redon
         </span>
-        <div class="subscribe">
-            <form>
-                <input type="email" placeholder="Example@gmail.com" required/>
-                <input type="sumbit" value="Send">
-            </form>
-        </div>
     </footer>
 
     <!--Script------>
