@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Shopping Website</title>
+    <title>Shopping Website - Home</title>
     <!--stylesheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--JQuery--------->
+    <!--------jQuery------>
     <script src="js/jQuery.js"></script>
     <!--Ikona ne titullin e webit-->
     <link rel="shortcut icon" href="img/Ikona-logo.png" />
@@ -17,15 +17,12 @@
 <body>
     <!--Navigacioni-->
     <nav>
-        <!--social link dhe numri telefonit-->
+        <!--social link-->
         <div class="social-call">
             <div class="social">
                 <a href=""><i class="fab fa-facebook"></i></a>
                 <a href=""><i class="fab fa-twitter"></i></a>
                 <a href=""><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="phone">
-                <span>Call +123-456-789</span>
             </div>
         </div>
 
@@ -43,6 +40,8 @@
                 <li><a href="Kids.html">Kids</a></li>
                 <li><a href="#">Shop</a></li>
             </ul>
+
+
             <!--right menu-->
             <div class="right-menu">
                 <!--search ikon-->
@@ -75,7 +74,7 @@
             </a>
         </div>
     </div>
-    <!--log-in-dhe-sign-up-form-->
+    <!--------------------------------------log-in-dhe-sign-up-form---------------------------------->
     <div class="form">
         <!--login------->
         <div class="login-form">
@@ -86,11 +85,13 @@
             <!--heading-->
             <strong>Log In</strong>
             <!---inputet-->
-            <form>
-                <input type="email" placeholder="Example@gmail.com" name="email" required>
-                <input type="password" placeholder="Password" name="password" required>
+            <form name="registration">
+                <p id="emailVal1"></p>
+                <input type="email" id="email01" placeholder="Example@gmail.com" name="email" required>
+                <p id="passwordVal1"></p>
+                <input type="password" id="pass01" placeholder="Password" name="password" required>
                 <!--butoni-submit-->
-                <input type="submit" value="Log In">
+                <input type="submit" value="Log In" onclick="validateLogin()">
             </form>
             <!--butoni-forget-dhe-sign-up-->
             <div class="form-buttons">
@@ -598,7 +599,7 @@
     <!--Script------>
     <script src="js/scipt.js"></script>
     <script src="js/slider.js"></script>
-
+    <script src="js/ValidationForm.js"></script>
 </body>
 
 </html>
