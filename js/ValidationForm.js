@@ -1,5 +1,8 @@
 function validateLogin() {
-    var p = document.getElementById('pass01').value,
+    var p = document.getElementById('pass011').value,
+    var e = document.getElementById('email01').value,
+    var emailcheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
         errors = [];
     if (p.length < 8) {
         errors.push("Your password must be at least 8 characters");
@@ -18,6 +21,9 @@ function validateLogin() {
     }
     if (p.search(/[!@#.\$%\^&\*_]/) < 0) {
         errors.push("Your password must contain at least special char from -[ ! @ # $ % ^ & * _  .]");
+    }
+    if(e.search(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) = false){
+        errors.push("Please Write a Valid Email Adress");
     }
     if (errors.length > 0) {
         alert(errors.join("\n"));
