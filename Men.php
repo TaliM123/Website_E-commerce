@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women's Clothing</title>
+    <title>Men's Clothing</title>
     <!--stylesheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--JQuery--------->
     <script src="js/jQuery.js"></script>
-
     <!--Ikona ne titullin e webit-->
     <link rel="shortcut icon" href="img/Ikona-logo.png" />
     <!--FontAwesome-->
@@ -19,67 +18,16 @@
 
 <body>
     <!--Navigacioni-->
-    <nav>
-        <!--social link-->
-        <div class="social-call">
-            <div class="social">
-                <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-
-        <!--Menu-bar---------------------->
-        <div class="navigation">
-            <!--logo-->
-            <a href="#" class="logo">
-                <img src="img/Logo.png" alt="">
-            </a>
-            <!--menu-icon-------------->
-            <div class="toggle"></div>
-            
-            <!--menu-->
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Men.html">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="Kids.html">Children</a></li>
-                <li><a href="#">Shop</a></li>
-            </ul>
-            <!--right menu-->
-            <div class="right-menu">
-                <!--search ikon-->
-                <a href="javascript:void(0);" class="search">
-                    <i class="fas fa-search"></i>
-                </a>
-                <!--Kart ikon-->
-                <a href="#">
-                    <i class="fas fa-shopping-cart">
-                        <!--Numra e produkteve brenda kartes-->
-                        <span class="num-cart-product">0</span>
-                    </i>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <?php include './includeParts/navigation.php' ?>
+    
     <!--Search bari------------->
-    <div class="search-bar">
-        <!--Search Inputi ----->
-        <div class="search-input">
-            <!--Input-->
-            <input type="text" placeholder="Search For Product" />
-            <!--Butoni Cancel-->
-            <a href="javascript:void(0);" class="search-cancel">
-                <i class="fas fa-times"></i>
-            </a>
-        </div>
-    </div>
-    <!------------------------------------------Kategorite Featured--------------------------------->
+    <?php include './includeParts/search-bar.php' ?>
 
-    <div class="header-title women">
-        <h2>Women's Clothing</h2>
-    </div>
+    <!------------------------------------------Header Title--------------------------------->
 
+    <div class="header-title man">
+        <h2>Men's Clothing</h2>
+    </div>
 
     <!-----------------------------------New-Arrival------------------------------------------->
 
@@ -88,7 +36,7 @@
         <div class="arrival-heading">
 
             <strong>New Arrival</strong>
-            <p>We provide you the best fashion clothes</p>
+            <p>We provide you new design fashion clothes</p>
 
         </div>
         <!---product-container-->
@@ -102,14 +50,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/FeatureHoodies.png" />
+                    <img src="img/Men-Wear-NewArrival-01.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">Eco Hoodie</a>
-                    <span class="p-price">$25.00</span>
+                    <a href="#" class="p-name">All-Over Print Men's Crew Neck T-Shirt</a>
+                    <span class="p-price">$15.00</span>
                 </div>
             </div>
             <!---product-box-2-->
@@ -121,14 +69,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/Hoodie2.png" />
+                    <img src="img/Men-Wear-NewArrival-02.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">Eco Hoodie</a>
-                    <span class="p-price">$25.00</span>
+                    <a href="#" class="p-name">Men's Heavyweight Tee</a>
+                    <span class="p-price">$12.00</span>
                 </div>
             </div>
             <!---product-box-3-->
@@ -140,14 +88,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/WhiteS.png" />
+                    <img src="img/Men-Wear-NewArrival-03.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">White Sweatshirt</a>
-                    <span class="p-price">$20.00</span>
+                    <a href="#" class="p-name">Oversized Tie-Dye T-Shirt</a>
+                    <span class="p-price">$18.00</span>
                 </div>
             </div>
             <!---product-box-4-->
@@ -159,14 +107,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/BlackS.png" />
+                    <img src="img/Men-Wear-NewArrival-04.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">Black Sweatshirt</a>
-                    <span class="p-price">$20.00</span>
+                    <a href="#" class="p-name">Unisex Tri-Blend T-Shirt</a>
+                    <span class="p-price">$16.00</span>
                 </div>
             </div>
             <!---product-box-5-->
@@ -178,14 +126,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/SkaterSkirt.png" />
+                    <img src="img/Men-Wear-NewArrival-05.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">Skater Skirt</a>
-                    <span class="p-price">$30.00</span>
+                    <a href="#" class="p-name">Unisex Champion Tie-Dye Hoodie</a>
+                    <span class="p-price">$52.00</span>
                 </div>
             </div>
             <!---product-box-6-->
@@ -197,14 +145,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/DressH.png" />
+                    <img src="img/Men-Wear-NewArrival-06.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">Dress Hoodie</a>
-                    <span class="p-price">$40.00</span>
+                    <a href="#" class="p-name">Unisex Essential Eco Hoodie</a>
+                    <span class="p-price">$39.00</span>
                 </div>
             </div>
             <!---product-box-7-->
@@ -216,14 +164,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/DressP.png" />
+                    <img src="img/Men-Wear-NewArrival-07.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">Print Dress</a>
-                    <span class="p-price">$35.00</span>
+                    <a href="#" class="p-name">Hoodie | Stanley/Stella STSU824</a>
+                    <span class="p-price">$36.00</span>
                 </div>
             </div>
             <!---product-box-8-->
@@ -235,14 +183,14 @@
                     <a href="#" class="add-cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <img src="img/denimT.png" />
+                    <img src="img/Men-Wear-NewArrival-08.jpg" />
                 </div>
 
 
                 <!---details-->
                 <div class="product-details">
-                    <a href="#" class="p-name">Denim T-Shirt</a>
-                    <span class="p-price">$12.00</span>
+                    <a href="#" class="p-name">Unisex Lightweight Hoodie | District DT571</a>
+                    <span class="p-price">$25.00</span>
                 </div>
             </div>
 
@@ -255,11 +203,11 @@
         <!-----sale-box-->
         <div class="sale-box">
             <!---img-->
-            <img src="img/FeatureDresses.png" />
+            <img src="img/Man-Wear-Sale-01.jpg" />
             <!---text-->
             <a href="#">
                 <div class="sale-text">
-                    <strong>White Dress</strong>
+                    <strong>Sweatpants | Cotton Heritage M7580</strong>
                     <span>Sale off 15%</span>
                 </div>
             </a>
@@ -267,34 +215,38 @@
         <!-----sale-box-2-->
         <div class="sale-box">
             <!---img-->
-            <img src="img/FeatureSweatshirts.png" />
+            <img src="img/Man-Wear-Sale-02.jpg" />
             <!---text-->
             <a href="#">
                 <div class="sale-text">
-                    <strong>Black Sweater</strong>
-                    <span>Sale off 20%</span>
+                    <strong>Unisex Joggers | Jerzees 975MPR</strong>
+                    <span>Sale off 25%</span>
                 </div>
             </a>
         </div>
         <!-----sale-box-3-->
         <div class="sale-box">
             <!---img-->
-            <img src="img/FeatureTshirts.png" />
+            <img src="img/Man-Wear-Sale-03.jpg" />
             <!---text-->
             <a href="#">
                 <div class="sale-text">
-                    <strong>Black <br>T-shirt</strong>
-                    <span>Sale off 17%</span>
+                    <strong>All-Over Print Men's Joggers</strong>
+                    <span>Sale off 20%</span>
                 </div>
             </a>
         </div>
-        <!--new-arrival----------------->
+
+        <!-------------------------new-arrival-------------------------------------------------->
+
+        <!---------------------------------------------------------------------------------------->
+
         <section class="new-arrival">
             <!--heading----->
             <div class="arrival-heading">
 
                 <strong>feature Items</strong>
-                <p>We provide you new design fashion clothes</p>
+                <p>We provide you with the best fashion clothes</p>
 
             </div>
             <!---product-container-->
@@ -308,14 +260,14 @@
                         <a href="#" class="add-cart">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <img src="img/dressP2.png" />
+                        <img src="img/Man-Wear-Featured-Items-01.jpg" />
                     </div>
 
 
                     <!---details-->
                     <div class="product-details">
-                        <a href="#" class="p-name">Dress</a>
-                        <span class="p-price">$50.00</span>
+                        <a href="#" class="p-name">Classic Polo Shirt | Gildan 3800</a>
+                        <span class="p-price">$15.00</span>
                     </div>
                 </div>
                 <!---product-box-2-->
@@ -327,14 +279,14 @@
                         <a href="#" class="add-cart">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <img src="img/Thoodie.png" />
+                        <img src="img/Man-Wear-Featured-Items-02.jpg" />
                     </div>
 
 
                     <!---details-->
                     <div class="product-details">
-                        <a href="#" class="p-name">Drawstring T-shirt</a>
-                        <span class="p-price">$48.00</span>
+                        <a href="#" class="p-name">Sleeve Raglan Shirt | Tultex 245</a>
+                        <span class="p-price">$19.00</span>
                     </div>
                 </div>
                 <!---product-box-3-->
@@ -346,14 +298,14 @@
                         <a href="#" class="add-cart">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <img src="img/neckT.png" />
+                        <img src="img/Man-Wear-Featured-Items-03.jpg" />
                     </div>
 
 
                     <!---details-->
                     <div class="product-details">
-                        <a href="#" class="p-name">Nect T-shirt</a>
-                        <span class="p-price">$30.00</span>
+                        <a href="#" class="p-name">Men's Athletic Long Shorts</a>
+                        <span class="p-price">$27.00</span>
                     </div>
                 </div>
                 <!---product-box-4-->
@@ -365,38 +317,24 @@
                         <a href="#" class="add-cart">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <img src="img/pullover.png" />
+                        <img src="img/Man-Wear-Featured-Items-04.jpg" />
                     </div>
 
 
                     <!---details-->
                     <div class="product-details">
-                        <a href="#" class="p-name">Pullover</a>
-                        <span class="p-price">$44.99</span>
+                        <a href="#" class="p-name">Men's Champion Sweatshirt</a>
+                        <span class="p-price">$39.00</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!--banner------>
-        <div class="banner-box banner-foto-women-clothes">
-            <!--Slider text container-->
-            <div class="banner-container">
-                <div class="banner-text">
-                    <span>Limited Offer</span>
-                    <strong>25% off<br/> with <font>promo code</font></strong>
-                    <a href="#" class="banner-btn">Shop Now</a>
-                </div>
-            </div>
-        </div>
+        <div class="banner-box banner-foto-man-clothes"></div>
     </section>
     <!-------------------------------------------Footer----------------------------------------------->
-    <footer>
-        <!--copyright-------->
-        <span class="copyright">
-            Copyright 2021 - Taulant Merlaku / Redon Bajrami
-        </span>
-    </footer>
+    <?php include './includeParts/footer.php' ?>
 
     <!--Script------>
     <script src="js/scipt.js"></script>
