@@ -28,3 +28,11 @@ $(window).scroll(function() {
         $('.navigation').removeClass('fix-nav');
     }
 });
+
+/*Per menu responzive*/
+$(document).ready(function(){
+    $('.toggle').click(function(){
+        $('.toggle').toggleClass('active')
+        $('.navigation').toggleClass('active')
+    })
+})

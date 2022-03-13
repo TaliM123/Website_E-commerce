@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Website - Home</title>
     <!--stylesheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -32,6 +34,9 @@
             <a href="#" class="logo">
                 <img src="img/Logo.png" alt="">
             </a>
+            <!--menu-icon-------------->
+            <div class="toggle"></div>
+
             <!--menu-->
             <ul class="menu">
                 <li><a href="#">Home</a></li>
@@ -85,7 +90,7 @@
             <!--heading-->
             <strong>Log In</strong>
             <!---inputet-->
-            <form name="registration" onsubmit="return validateLogin(this)">
+            <form name="registration" onsubmit="validateLogin(this)">
                 <input type="email" id="email01" placeholder="Example@gmail.com" name="email" required>
                 <input type="password" id="pass01" placeholder="Password" name="password" required>
                 <!--butoni-submit-->
@@ -108,7 +113,7 @@
             <!--heading-->
             <strong>Sign Up</strong>
             <!---inputet-->
-            <form name="sing-up" onsubmit="return validateCreateAccount(this)">
+            <form name="sing-up" onsubmit="validateCreateAccount(this)">
                 <input type="text" id="name02" placeholder="Full Name" name="fullname" required>
                 <input type="email" id="email02" placeholder="Example@gmail.com" name="email" required>
                 <input type="password" id="pass02" placeholder="Password" name="password" required>
@@ -126,7 +131,7 @@
 
     <!-----------------------------------Full Slider----------------------------------------------->
 
-    <ul id="adaptive" class="cs-hidden">
+    <ul id="adaptive">
         <!--box 1------>
         <li class="item-a">
             <!--box----->
@@ -135,7 +140,7 @@
                 <div class="slider-text-container">
                     <div class="f-slider-text">
                         <span>Limited Offer</span>
-                        <strong>25% off<br/> with <font>promo code</font></strong>
+                        <strong>25% off<br /> with <font>promo code</font></strong>
                         <a href="#" class="f-slider-btn">Shop Now</a>
                     </div>
                 </div>
@@ -150,7 +155,7 @@
                 <div class="slider-text-container">
                     <div class="f-slider-text">
                         <span>Limited Offer</span>
-                        <strong>25% off<br/> with <font>promo code</font></strong>
+                        <strong>25% off<br /> with <font>promo code</font></strong>
                         <a href="#" class="f-slider-btn">Shop Now</a>
                     </div>
                 </div>
@@ -165,7 +170,7 @@
                 <div class="slider-text-container">
                     <div class="f-slider-text">
                         <span>Limited Offer</span>
-                        <strong>25% off<br/> with <font>promo code</font></strong>
+                        <strong>25% off<br /> with <font>promo code</font></strong>
                         <a href="#" class="f-slider-btn">Shop Now</a>
                     </div>
                 </div>
@@ -550,7 +555,7 @@
             <div class="banner-container">
                 <div class="banner-text banner-text-home">
                     <span>Limited Offer</span>
-                    <strong>25% off<br/> with <font>promo code</font></strong>
+                    <strong>25% off<br /> with <font>promo code</font></strong>
                     <a href="#" class="banner-btn">Shop Now</a>
                 </div>
             </div>
