@@ -23,7 +23,7 @@
             <li><a href="Men.php">Men</a></li>
             <li><a href="Women.php">Women</a></li>
             <li><a href="Kids.php">Children</a></li>
-            <li><a href="#">Shop</a></li>
+            <li><a href="login.php" class="login-test">Login/Register</a></li>
         </ul>
 
 
@@ -32,10 +32,6 @@
             <!--search ikon-->
             <a href="javascript:void(0);" class="search">
                 <i class="fas fa-search"></i>
-            </a>
-            <!--user ikon-->
-            <a href="javascript:void(0);" class="user">
-                <i class="far fa-user"></i>
             </a>
             <!--Kart ikon-->
             <a href="#">
