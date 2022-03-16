@@ -6,18 +6,6 @@ $(document).on('click', '.search', function () {
 $(document).on('click', '.search-cancel', function () {
     $('.search-bar').removeClass('search-bar-active')
 });
-//Funksion per log in dhe sign up 
-$(document).on('click', '.user,.already-account', function () {
-    $('.form').addClass('login-active').removeClass('sign-up-active')
-});
-
-$(document).on('click', '.sign-up-btn', function () {
-    $('.form').addClass('sign-up-active').removeClass('login-active')
-});
-
-$(document).on('click', '.form-cancel', function () {
-    $('.form').removeClass('login-active').removeClass('sign-up-active')
-});
 
 // Per fix menu gjate levizjes ne faqe rrin gjithmon ne top dhe kur preket ikona e search ose login
 //nuk del ne fillin te faqes pra ndreq kete error

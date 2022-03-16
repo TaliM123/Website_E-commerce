@@ -23,9 +23,6 @@
     <!--Search bari------------->
     <?php include './includeParts/search-bar.php' ?>
 
-    <!--------------------------------------log-in-dhe-sign-up-form---------------------------------->
-    <?php include './includeParts/login-signup-form.php' ?>
-
     <!-----------------------------------Full Slider----------------------------------------------->
     <?php include './includeParts/slider.php' ?>
 
@@ -390,16 +387,7 @@
         </section>
 
         <!--banner------>
-        <div class="banner-box f-slide-1">
-            <!--Slider text container-->
-            <div class="banner-container">
-                <div class="banner-text banner-text-home">
-                    <span>Limited Offer</span>
-                    <strong>25% off<br /> with <font>promo code</font></strong>
-                    <a href="#" class="banner-btn">Shop Now</a>
-                </div>
-            </div>
-        </div>
+        <?php include './includeParts/banner.php' ?>
     </section>
     <!--services------------------>
     <?php include './includeParts/services.php' ?>

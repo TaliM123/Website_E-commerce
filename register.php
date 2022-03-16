@@ -52,29 +52,30 @@
     </nav>
     <br>
     <div class="form">
-        <!--login------->
-        <div class="login-form">
+        <!--Sign-up------->
+        <div class="sign-up-form">
             <!---butoni-cancel-->
             <a href="javascript:void(0);" class="form-cancel">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-times"> </i>
             </a>
             <!--heading-->
-            <strong>Log In</strong>
+            <strong>Sign Up</strong>
             <!---inputet-->
-            <form>
-                <input type="email" placeholder="Example@gmail.com" name="email" required>
-                <input type="password" placeholder="Password" name="password" required>
+            <form name="sing-up" onsubmit="validateCreateAccount(this)">
+                <input type="text" id="name02" placeholder="Full Name" name="fullname" required>
+                <input type="email" id="email02" placeholder="Example@gmail.com" name="email" required>
+                <input type="password" id="pass02" placeholder="Password" name="password" required>
                 <!--butoni-submit-->
-                <input type="submit" value="Log In">
+                <input type="submit" value="Sign Up">
             </form>
             <!--butoni-forget-dhe-sign-up-->
             <div class="form-buttons">
-                <a href="#" class="forget">Forgot your password?</a>
-                <a href="register.php" class="sign-up-btn">Create account</a>
+                <a href="login.php" class="already-account">Already have an account?</a>
+
             </div>
         </div>
     </div>
-    
+
     <?php include './includeParts/banner.php' ?>
 
     <!-------------------------------------------Footer----------------------------------------------->
