@@ -24,3 +24,9 @@ $(document).ready(function () {
         $('.navigation').toggleClass('active')
     })
 })
+
+/*Pop up for registering and log in*/
+function successfulRegister()
+{
+alert("Thanks for Registering with Us!");
+}

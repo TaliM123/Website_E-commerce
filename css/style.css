@@ -473,6 +473,14 @@ nav {
     text-align: left;
 }
 
+.form h1{
+    margin-bottom: 100px;
+    margin-top: 0%;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #272727;
+    border-radius: 20px;
+}
 
 
 /*-----------------------------------Slider--------------------------------------------*/

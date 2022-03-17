@@ -38,11 +38,8 @@
 
             <!--menu-->
             <ul class="menu" style="margin-right: 20px;">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="Men.php">Men</a></li>
-                <li><a href="Women.php">Women</a></li>
-                <li><a href="Kids.php">Children</a></li>
-                <li><a href="login.php">Login/Register</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
             </ul>
             <!--right menu-->
             <div class="right-menu">
@@ -52,12 +49,11 @@
     </nav>
     <br>
     <div class="form">
+        <?php if (isset($register_popup)) { ?>
+            <h1 class="successfulRegister"><?php echo $register_popup ?></h1>
+        <?php } ?>
         <!--login------->
         <div class="login-form">
-            <!---butoni-cancel-->
-            <a href="javascript:void(0);" class="form-cancel">
-                <i class="fas fa-times"></i>
-            </a>
             <!--heading-->
             <strong>Log In</strong>
             <!---inputet-->
@@ -74,7 +70,7 @@
             </div>
         </div>
     </div>
-    
+
     <?php include './includeParts/banner.php' ?>
 
     <!-------------------------------------------Footer----------------------------------------------->
@@ -82,7 +78,6 @@
 
     <!--Script------>
     <script src="js/scipt.js"></script>
-    <script src="js/ValidationForm.js"></script>
 
 </body>
 

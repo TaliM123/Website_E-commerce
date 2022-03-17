@@ -23,7 +23,6 @@
             <li><a href="Men.php">Men</a></li>
             <li><a href="Women.php">Women</a></li>
             <li><a href="Kids.php">Children</a></li>
-            <li><a href="login.php" class="login-test">Login/Register</a></li>
         </ul>
 
 

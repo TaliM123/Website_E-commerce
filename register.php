@@ -1,3 +1,9 @@
+<?php
+    if (!isset($username)) {
+        $username = '';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,11 +44,8 @@
 
             <!--menu-->
             <ul class="menu" style="margin-right: 20px;">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="Men.php">Men</a></li>
-                <li><a href="Women.php">Women</a></li>
-                <li><a href="Kids.php">Children</a></li>
-                <li><a href="login.php">Login/Register</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
             </ul>
             <!--right menu-->
             <div class="right-menu">
@@ -54,17 +57,19 @@
     <div class="form">
         <!--Sign-up------->
         <div class="sign-up-form">
-            <!---butoni-cancel-->
-            <a href="javascript:void(0);" class="form-cancel">
-                <i class="fas fa-times"> </i>
-            </a>
             <!--heading-->
             <strong>Sign Up</strong>
             <!---inputet-->
-            <form name="sing-up" onsubmit="validateCreateAccount(this)">
-                <input type="text" id="name02" placeholder="Full Name" name="fullname" required>
-                <input type="email" id="email02" placeholder="Example@gmail.com" name="email" required>
-                <input type="password" id="pass02" placeholder="Password" name="password" required>
+            <form action="results.php" method="POST">
+                <input type="text" placeholder="Username" value="<?php echo htmlspecialchars($username) ?>" name="username" required>
+                <?php if (isset($username_error)) { ?>
+                    <p><?php echo $username_error ?></p>
+                <?php } ?>
+                <input type="email" placeholder="Example@gmail.com" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <?php if (isset($password_error)) { ?>
+                    <p><?php echo $password_error ?></p>
+                <?php } ?>
                 <!--butoni-submit-->
                 <input type="submit" value="Sign Up">
             </form>
@@ -83,7 +88,6 @@
 
     <!--Script------>
     <script src="js/scipt.js"></script>
-    <script src="js/ValidationForm.js"></script>
 
 </body>
 
