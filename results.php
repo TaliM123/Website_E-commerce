@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $db = mysqli_connect('localhost', 'root', '', 'registration');
 //Register form
 if (isset($_POST['reg_user'])) {
