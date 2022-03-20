@@ -1,6 +1,14 @@
 <?php
+    session_start();
     if (!isset($username)) {
         $username = '';
+    }
+    if (!isset($email)) {
+        $email = '';
+    }
+    if (isset($_SESSION['username'])) {
+        $_SESSION['msg'] = "You are already have an account";
+        header('location: index.php');
     }
 ?>
 
@@ -65,13 +73,16 @@
                 <?php if (isset($username_error)) { ?>
                     <p><?php echo $username_error ?></p>
                 <?php } ?>
-                <input type="email" placeholder="Example@gmail.com" name="email" required>
+                <input type="email" placeholder="Example@gmail.com" value="<?php echo htmlspecialchars($email) ?>" name="email" required>
+                <?php if (isset($email_error)) { ?>
+                    <p><?php echo $email_error ?></p>
+                <?php } ?>
                 <input type="password" placeholder="Password" name="password" required>
                 <?php if (isset($password_error)) { ?>
                     <p><?php echo $password_error ?></p>
                 <?php } ?>
                 <!--butoni-submit-->
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Sign Up" name="reg_user">
             </form>
             <!--butoni-forget-dhe-sign-up-->
             <div class="form-buttons">

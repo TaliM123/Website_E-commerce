@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You are already logged in";
+    header('location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,11 +66,14 @@
             <!--heading-->
             <strong>Log In</strong>
             <!---inputet-->
-            <form>
-                <input type="email" placeholder="Example@gmail.com" name="email" required>
+            <form method="POST" action="results.php">
+                <?php if (isset($login_error)) { ?>
+                    <p><?php echo $login_error ?></p>
+                <?php } ?>
+                <input type="text" placeholder="Username" name="username" required>
                 <input type="password" placeholder="Password" name="password" required>
                 <!--butoni-submit-->
-                <input type="submit" value="Log In">
+                <input type="submit" value="Log In" name="login_user">
             </form>
             <!--butoni-forget-dhe-sign-up-->
             <div class="form-buttons">

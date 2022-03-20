@@ -25,9 +25,10 @@ nav {
 }
 
 .social-call {
-    height: 40px;
+    height: 80x;
     border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
 }
@@ -35,12 +36,6 @@ nav {
 .social a {
     margin: 0px 5px;
     color: rgba(0, 0, 0, 0.7);
-    font-size: 0.9rem;
-}
-
-.phone {
-    color: rgba(0, 0, 0, 0.7);
-    margin-left: 30px;
     font-size: 0.9rem;
 }
 
