@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $db = mysqli_connect('localhost', 'root', '', 'registration');
 //Register form
@@ -50,7 +53,8 @@ if (isset($_POST['reg_user'])) {
     if (empty($username_error) && empty($email_error) && empty($password_error)) {
         $password = md5($password); //encrypt the password before saving in the database
 
-        $query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
+        $query = "INSERT INTO users (username, email, password, user_type) 
+        VALUES('$username', '$email', '$password', 'user')";
         mysqli_query($db, $query);
 
         $register_popup = 'Thanks for Registering with Us please log in';
@@ -70,10 +74,18 @@ if (isset($_POST['login_user'])) {
     $results = mysqli_query($db, $query);
 
     if (mysqli_num_rows($results) == 1) {
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = "You are now logged in";
-        header('location: index.php');
+        $logged_in_user = mysqli_fetch_assoc($results);
+        if ($logged_in_user['user_type'] == 'admin') {
+            $_SESSION['username'] = $username;
+            $_SESSION['success']  = "You are now logged in Admin";
+            header('location: admin/index.php');
+        } else {
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = "You are now logged in";
+            header('location: index.php');
+        }
     } else {
         $login_error = 'Wrong username / password combination';
+        include('login.php');
     }
 }
