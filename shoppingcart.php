@@ -38,7 +38,8 @@ include('./includeParts/phpcommands.php');
                     <th>Name</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Price</th>
+                    <th>Total Price</th>
+                    <th>Action</th>
                 </thead>
                 <tbody>
                     <?php
@@ -50,15 +51,15 @@ include('./includeParts/phpcommands.php');
                             <tr>
                                 <td><img src="img/<?php echo $fetch_cart['img']; ?>" height="100" alt=""></td>
                                 <td><?php echo $fetch_cart['name']; ?></td>
-                                <td>$<?php echo $fetch_cart['price']; ?>/-</td>
+                                <td>$<?php echo $fetch_cart['price']; ?></td>
                                 <td>
                                     <form action="" method="post">
                                         <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
-                                        <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
-                                        <input type="submit" name="update_cart" value="update" class="option-btn">
+                                        <input type="number" id="cartquantity" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
+                                        <input type="submit" id="updatecart" name="update_cart" value="update" class="option-btn">
                                     </form>
                                 </td>
-                                <td>$<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
+                                <td>$<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></td>
                                 <td><a href="shoppingcart.php?remove=<?php echo $fetch_cart['id']; ?>" class="delete-btn" onclick="return confirm('remove item from cart?');">remove</a></td>
                             </tr>
                     <?php
@@ -69,8 +70,8 @@ include('./includeParts/phpcommands.php');
                     }
                     ?>
                     <tr class="table-bottom">
-                        <td colspan="4">grand total :</td>
-                        <td>$<?php echo $grand_total; ?>/-</td>
+                        <td colspan="4">Grand Total :</td>
+                        <td>$<?php echo $grand_total; ?></td>
                         <td><a href="shoppingcart.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">delete all</a></td>
                     </tr>
                 </tbody>

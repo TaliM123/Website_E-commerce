@@ -1,17 +1,17 @@
 <?php
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
-    if (!isset($username)) {
-        $username = '';
-    }
-    if (!isset($email)) {
-        $email = '';
-    }
-    if (isset($_SESSION['username'])) {
-        $_SESSION['msg'] = "You are already have an account";
-        header('location: index.php');
-    }
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+if (!isset($username)) {
+    $username = '';
+}
+if (!isset($email)) {
+    $email = '';
+}
+if (isset($_SESSION['username'])) {
+    $message[] = "You are already have an account";
+    header('location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +62,13 @@
                 <a><i></i></a><a><i></i></a>
             </div>
         </div>
+        <?php
+        if (isset($message)) {
+            foreach ($message as $message) {
+                echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
+            }
+        }
+        ?>
     </nav>
     <br>
     <div class="form">

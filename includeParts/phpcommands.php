@@ -8,8 +8,8 @@ $username = $_SESSION['username'];
 $sql = "Select * from cart where username = '$username'";
 
 if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
+    $message[] = "You must login first!";
 }
 if (isset($_GET['logout'])) {
     session_destroy();
@@ -44,10 +44,9 @@ if (isset($_POST['update_cart'])) {
 if (isset($_GET['remove'])) {
     $remove_id = $_GET['remove'];
     mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'") or die('query failed');
-    header('location:shoppingcart.php');
 }
 
 if (isset($_GET['delete_all'])) {
-    mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+    mysqli_query($conn, "DELETE FROM `cart` WHERE username = '$username'") or die('query failed');
     header('location:index.php');
 }

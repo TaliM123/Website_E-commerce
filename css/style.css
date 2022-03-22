@@ -989,6 +989,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .delete-btn{
@@ -1004,6 +1005,43 @@ nav {
     color:var(--white);
     text-transform: capitalize;
     font-size: 16px;
+}
+
+.shoppingcart_products table tbody tr td{
+    padding: 10px;
+}
+
+#cartquantity{
+    width: 3rem;
+    padding: 5px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+#updatecart{
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-left: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #0b9d8a;
+    color: white;
+    font-weight: bold;
+}
+#updatecart:hover{
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25);
+}
+
+.message{
+    text-align: center;
+    position: relative;
+    text-transform: capitalize;
+    color: red;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px;
 }
 
 

@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if (isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You are already logged in";
+    $message[] = "You are already logged in";
     header('location: index.php');
 }
 ?>
@@ -57,6 +57,13 @@ if (isset($_SESSION['username'])) {
                 <a><i></i></a><a><i></i></a>
             </div>
         </div>
+        <?php
+        if (isset($message)) {
+            foreach ($message as $message) {
+                echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
+            }
+        }
+        ?>
     </nav>
     <br>
     <div class="form">
