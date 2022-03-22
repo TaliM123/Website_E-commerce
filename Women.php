@@ -1,15 +1,5 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
-}
-if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['username']);
-    header("location: login.php");
-}
+include('./includeParts/phpcommands.php');
 ?>
 
 <!DOCTYPE html>
@@ -35,9 +25,6 @@ if (isset($_GET['logout'])) {
     <!--Navigacioni-->
     <?php include './includeParts/navigation.php' ?>
 
-    <!--Search bari------------->
-    <?php include './includeParts/search-bar.php' ?>
-
     <!------------------------------------------Kategorite Featured--------------------------------->
 
     <div class="header-title women">
@@ -57,6 +44,27 @@ if (isset($_GET['logout'])) {
         </div>
         <!---product-container-->
         <div class="product-container">
+            <?php $select_product = mysqli_query($conn, "SELECT * FROM `womennewarrival`") or die('query failed');
+            if (mysqli_num_rows($select_product) > 0) {
+                while ($fetch_product = mysqli_fetch_assoc($select_product)) { ?>
+                    <form class="product-box" method="post" action="">
+                        <!---img-->
+                        <div class="product-img">
+                            <!--add-shopping-cart-->
+                            <a href="#" class="add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            <img src="img/<?php echo $fetch_product['img']; ?>" />
+                        </div>
+
+                        <!---details-->
+                        <div class="product-details">
+                            <a href="#" class="p-name"><?php echo $fetch_product['name']; ?></a>
+                            <span class="p-price">$<?php echo $fetch_product['price']; ?></span>
+                        </div>
+                    </form>
+            <?php };
+            }; ?>
             <!---product-box-1-->
             <div class="product-box">
 

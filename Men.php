@@ -1,15 +1,5 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
-}
-if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['username']);
-    header("location: login.php");
-}
+include('./includeParts/phpcommands.php');
 ?>
 
 <!DOCTYPE html>
@@ -33,9 +23,6 @@ if (isset($_GET['logout'])) {
 <body>
     <!--Navigacioni-->
     <?php include './includeParts/navigation.php' ?>
-    
-    <!--Search bari------------->
-    <?php include './includeParts/search-bar.php' ?>
 
     <!------------------------------------------Header Title--------------------------------->
 
@@ -55,159 +42,12 @@ if (isset($_GET['logout'])) {
         </div>
         <!---product-container-->
         <div class="product-container">
-            <!---product-box-1-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-01.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">All-Over Print Men's Crew Neck T-Shirt</a>
-                    <span class="p-price">$15.00</span>
-                </div>
-            </div>
-            <!---product-box-2-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-02.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">Men's Heavyweight Tee</a>
-                    <span class="p-price">$12.00</span>
-                </div>
-            </div>
-            <!---product-box-3-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-03.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">Oversized Tie-Dye T-Shirt</a>
-                    <span class="p-price">$18.00</span>
-                </div>
-            </div>
-            <!---product-box-4-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-04.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">Unisex Tri-Blend T-Shirt</a>
-                    <span class="p-price">$16.00</span>
-                </div>
-            </div>
-            <!---product-box-5-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-05.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">Unisex Champion Tie-Dye Hoodie</a>
-                    <span class="p-price">$52.00</span>
-                </div>
-            </div>
-            <!---product-box-6-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-06.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">Unisex Essential Eco Hoodie</a>
-                    <span class="p-price">$39.00</span>
-                </div>
-            </div>
-            <!---product-box-7-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-07.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">Hoodie | Stanley/Stella STSU824</a>
-                    <span class="p-price">$36.00</span>
-                </div>
-            </div>
-            <!---product-box-8-->
-            <div class="product-box">
-
-                <!---img-->
-                <div class="product-img">
-                    <!--add-shopping-cart-->
-                    <a href="#" class="add-cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <img src="img/Men-Wear-NewArrival-08.jpg" />
-                </div>
-
-
-                <!---details-->
-                <div class="product-details">
-                    <a href="#" class="p-name">Unisex Lightweight Hoodie | District DT571</a>
-                    <span class="p-price">$25.00</span>
-                </div>
-            </div>
-
+            <?php $select_product = mysqli_query($conn, "SELECT * FROM `mennewarrival`") or die('query failed');
+            if (mysqli_num_rows($select_product) > 0) {
+                while ($fetch_product = mysqli_fetch_assoc($select_product)) { 
+                    include('includeParts/products.php');
+                };
+            }; ?>
         </div>
     </section>
 
@@ -265,82 +105,14 @@ if (isset($_GET['logout'])) {
             </div>
             <!---product-container-->
             <div class="product-container">
-                <!---product-box-1-->
-                <div class="product-box">
-
-                    <!---img-->
-                    <div class="product-img">
-                        <!--add-shopping-cart-->
-                        <a href="#" class="add-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <img src="img/Man-Wear-Featured-Items-01.jpg" />
-                    </div>
-
-
-                    <!---details-->
-                    <div class="product-details">
-                        <a href="#" class="p-name">Classic Polo Shirt | Gildan 3800</a>
-                        <span class="p-price">$15.00</span>
-                    </div>
-                </div>
-                <!---product-box-2-->
-                <div class="product-box">
-
-                    <!---img-->
-                    <div class="product-img">
-                        <!--add-shopping-cart-->
-                        <a href="#" class="add-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <img src="img/Man-Wear-Featured-Items-02.jpg" />
-                    </div>
-
-
-                    <!---details-->
-                    <div class="product-details">
-                        <a href="#" class="p-name">Sleeve Raglan Shirt | Tultex 245</a>
-                        <span class="p-price">$19.00</span>
-                    </div>
-                </div>
-                <!---product-box-3-->
-                <div class="product-box">
-
-                    <!---img-->
-                    <div class="product-img">
-                        <!--add-shopping-cart-->
-                        <a href="#" class="add-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <img src="img/Man-Wear-Featured-Items-03.jpg" />
-                    </div>
-
-
-                    <!---details-->
-                    <div class="product-details">
-                        <a href="#" class="p-name">Men's Athletic Long Shorts</a>
-                        <span class="p-price">$27.00</span>
-                    </div>
-                </div>
-                <!---product-box-4-->
-                <div class="product-box">
-
-                    <!---img-->
-                    <div class="product-img">
-                        <!--add-shopping-cart-->
-                        <a href="#" class="add-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <img src="img/Man-Wear-Featured-Items-04.jpg" />
-                    </div>
-
-
-                    <!---details-->
-                    <div class="product-details">
-                        <a href="#" class="p-name">Men's Champion Sweatshirt</a>
-                        <span class="p-price">$39.00</span>
-                    </div>
-                </div>
+                <?php
+                $select_product = mysqli_query($conn, "SELECT * FROM `menfeatureitems`") or die('query failed');
+                if (mysqli_num_rows($select_product) > 0) {
+                    while ($fetch_product = mysqli_fetch_assoc($select_product)) {
+                        include('includeParts/products.php');
+                    };
+                };
+                ?>
             </div>
         </section>
 

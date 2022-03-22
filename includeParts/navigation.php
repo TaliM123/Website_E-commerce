@@ -57,12 +57,34 @@
                 <i class="fas fa-search"></i>
             </a>
             <!--Kart ikon-->
-            <a href="#">
+            <a href="shoppingcart.php">
                 <i class="fas fa-shopping-cart">
                     <!--Numra e produkteve brenda kartes-->
-                    <span class="num-cart-product">0</span>
+                    <span class="num-cart-product"><?php if($result=mysqli_query($conn,$sql)){
+                        $rowcount = mysqli_num_rows($result);
+                        echo $rowcount;
+                    } ?></span>
                 </i>
             </a>
         </div>
     </div>
+    <?php
+        if (isset($message)) {
+            foreach ($message as $message) {
+                echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
+            }
+        }
+        ?>
 </nav>
+
+<div class="search-bar">
+    <!--Search Inputi ----->
+    <div class="search-input">
+        <!--Input-->
+        <input type="text" placeholder="Search For Product" />
+        <!--Butoni Cancel-->
+        <a href="javascript:void(0);" class="search-cancel">
+            <i class="fas fa-times"></i>
+        </a>
+    </div>
+</div>
