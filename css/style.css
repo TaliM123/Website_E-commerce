@@ -846,9 +846,34 @@ nav {
     background-color: #f76b6a;
     transition: all ease 0.2s;
 }
+.remove-product:hover{
+    background-color: #f76b6a;
+    transition: all ease 0.2s;
+}
 
 .product-box:hover .add-cart {
     display: flex;
+}
+.product-box:hover .remove-product {
+    display: flex;
+}
+
+.remove-product{
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #0b9d8a;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: fade 0.3s;
+    border: none;
 }
 
 .new-arrival {
@@ -1019,7 +1044,7 @@ nav {
     text-align: center;
 }
 
-#updatecart{
+.updatecart{
     border: 1px solid rgba(0, 0, 0, 0.05);
     margin-left: 15px;
     font-size: 16px;
@@ -1031,8 +1056,10 @@ nav {
     color: white;
     font-weight: bold;
 }
-#updatecart:hover{
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25);
+
+.updatecart:hover{
+    background-color: #f76b6a;
+    transition: all ease 0.1s;
 }
 
 .message{
@@ -1044,6 +1071,57 @@ nav {
     padding: 10px;
 }
 
+.show-users{
+    width: fit-content;
+    position: relative;
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+.show-users table tbody tr td{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.adminpanel_header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.show-users table thead{
+    text-transform: capitalize;
+}
+
+#add-product{
+    text-align: center;
+}
+
+.add-product{
+    display: flex;
+}
+
+.inputbox{
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+}
+
+.price{
+    width: 80px;
+}
 
 /*----------------------------------- Foooter ----------------------------------------*/
 

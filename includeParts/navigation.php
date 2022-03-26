@@ -46,9 +46,14 @@
 
         <!--right menu-->
         <div class="right-menu">
+            <!--Admin panel-->
+            <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') { ?>
+                <a href="adminpanel.php">
+                    <i class="fa fa-user"></i>
+                </a> <?php } ?>
             <!--Log out icon-->
             <?php if (isset($_SESSION['username'])) : ?>
-                <a href="index.php?logout='1'">
+                <a href="index.php?logout='1'" onclick="return confirm('Are you sure you want to logout?');">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                 </a>
             <?php endif ?>
@@ -60,21 +65,23 @@
             <a href="shoppingcart.php">
                 <i class="fas fa-shopping-cart">
                     <!--Numra e produkteve brenda kartes-->
-                    <span class="num-cart-product"><?php if($result=mysqli_query($conn,$sql)){
-                        $rowcount = mysqli_num_rows($result);
-                        echo $rowcount;
-                    } ?></span>
+                    <span class="num-cart-product">
+                        <?php if ($result = mysqli_query($conn, $sql)) {
+                            $rowcount = mysqli_num_rows($result);
+                            echo $rowcount;
+                        } ?>
+                    </span>
                 </i>
             </a>
         </div>
     </div>
     <?php
-        if (isset($message)) {
-            foreach ($message as $message) {
-                echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
-            }
+    if (isset($message)) {
+        foreach ($message as $message) {
+            echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
         }
-        ?>
+    }
+    ?>
 </nav>
 
 <div class="search-bar">

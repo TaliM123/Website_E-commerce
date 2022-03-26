@@ -43,11 +43,7 @@ include('./includeParts/phpcommands.php');
         <!---product-container-->
         <div class="product-container">
             <?php $select_product = mysqli_query($conn, "SELECT * FROM `mennewarrival`") or die('query failed');
-            if (mysqli_num_rows($select_product) > 0) {
-                while ($fetch_product = mysqli_fetch_assoc($select_product)) { 
-                    include('includeParts/products.php');
-                };
-            }; ?>
+            include('includeParts/products.php'); ?>
         </div>
     </section>
 
@@ -107,12 +103,7 @@ include('./includeParts/phpcommands.php');
             <div class="product-container">
                 <?php
                 $select_product = mysqli_query($conn, "SELECT * FROM `menfeatureitems`") or die('query failed');
-                if (mysqli_num_rows($select_product) > 0) {
-                    while ($fetch_product = mysqli_fetch_assoc($select_product)) {
-                        include('includeParts/products.php');
-                    };
-                };
-                ?>
+                include('includeParts/products.php'); ?>
             </div>
         </section>
 

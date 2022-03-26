@@ -56,7 +56,7 @@ include('./includeParts/phpcommands.php');
                                     <form action="" method="post">
                                         <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
                                         <input type="number" id="cartquantity" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
-                                        <input type="submit" id="updatecart" name="update_cart" value="update" class="option-btn">
+                                        <input type="submit" class="updatecart" name="update_cart" value="update">
                                     </form>
                                 </td>
                                 <td>$<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></td>
@@ -83,7 +83,7 @@ include('./includeParts/phpcommands.php');
     <?php include './includeParts/footer.php' ?>
 
     <!--Script------>
-    <script src="js/scipt.j"></script>
+    <script src="js/scipt.js"></script>
 </body>
 
 </html>

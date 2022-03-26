@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2022 at 10:13 PM
+-- Generation Time: Mar 26, 2022 at 07:54 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -41,8 +41,103 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `username`, `name`, `price`, `img`, `quantity`) VALUES
-(24, 'Tali123', 'Unisex Tri-Blend T-Shirt', '16.00', 'Men-Wear-NewArrival-04.jpg', '7'),
-(25, 'Tali123', 'Oversized Tie-Dye T-Shirt', '18.00', 'Men-Wear-NewArrival-03.jpg', '1');
+(50, 'Tali123', 'White Sweatshirt', '20.00', 'WhiteS.png', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `indexfeatureitems`
+--
+
+CREATE TABLE `indexfeatureitems` (
+  `id` int(11) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'indexfeatureitems',
+  `img` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `indexfeatureitems`
+--
+
+INSERT INTO `indexfeatureitems` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'indexfeatureitems', 'Men-Wear-NewArrival-05.jpg', 'Hoodie', '40.00'),
+(2, 'indexfeatureitems', 'DressH.png', 'Dress', '29.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `indexnewarriwal`
+--
+
+CREATE TABLE `indexnewarriwal` (
+  `id` int(11) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'indexnewarriwal',
+  `img` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `indexnewarriwal`
+--
+
+INSERT INTO `indexnewarriwal` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'indexnewarriwal', 'Man-Wear-Sale-02.jpg', 'Man Pants', '35.00'),
+(3, 'indexnewarriwal', 'Man-Wear-Featured-Items-04.jpg', 'Sweatshirt', '40.00'),
+(4, 'indexnewarriwal', 'DressP.png', 'Dress', '25.00'),
+(5, 'indexnewarriwal', 'FeatureSkirts.png', 'Skirt', '20.00'),
+(8, 'indexnewarriwal', 'KidCoverT.png', 'T-shirt', '15.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kidsfeatureitems`
+--
+
+CREATE TABLE `kidsfeatureitems` (
+  `id` int(11) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'kidsfeatureitems',
+  `img` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kidsfeatureitems`
+--
+
+INSERT INTO `kidsfeatureitems` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'kidsfeatureitems', 'ecohoodie.png', 'Eco hoodie', '20.00'),
+(2, 'kidsfeatureitems', 'denimJ.png', 'Denim Jacket', '25.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kidsnewarrival`
+--
+
+CREATE TABLE `kidsnewarrival` (
+  `id` int(11) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'kidsnewarrival',
+  `img` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kidsnewarrival`
+--
+
+INSERT INTO `kidsnewarrival` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'kidsnewarrival', 'KidCoverH.png', 'Hoodie', '20.00'),
+(2, 'kidsnewarrival', 'kidsH2.png', 'Black Hoodie', '20.00'),
+(4, 'kidsnewarrival', 'jacketK.png', 'Jacket', '25.00'),
+(5, 'kidsnewarrival', 'KidsTshirt.png', 'Neck T-shirt', '25.00'),
+(6, 'kidsnewarrival', 'KidsTshirt2.png', 'Neck T-shirt', '25.00'),
+(7, 'kidsnewarrival', 'bbkids.png', 'Baby Short Sleeve One Piece', '10.00'),
+(8, 'kidsnewarrival', 'babybib.png', 'Baby bib', '5.00');
 
 -- --------------------------------------------------------
 
@@ -52,6 +147,7 @@ INSERT INTO `cart` (`id`, `username`, `name`, `price`, `img`, `quantity`) VALUES
 
 CREATE TABLE `menfeatureitems` (
   `id` int(11) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'menfeatureitems',
   `img` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL
@@ -61,11 +157,11 @@ CREATE TABLE `menfeatureitems` (
 -- Dumping data for table `menfeatureitems`
 --
 
-INSERT INTO `menfeatureitems` (`id`, `img`, `name`, `price`) VALUES
-(1, 'Man-Wear-Featured-Items-01.jpg', 'Classic Polo Shirt | Gildan 3800', '15.00'),
-(2, 'Man-Wear-Featured-Items-02.jpg', 'Sleeve Raglan Shirt | Tultex 245', '19.00'),
-(3, 'Man-Wear-Featured-Items-03.jpg', 'Men\'s Athletic Long Shorts', '27.00'),
-(4, 'Man-Wear-Featured-Items-04.jpg', 'Men\'s Champion Sweatshirt', '39.00');
+INSERT INTO `menfeatureitems` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'menfeatureitems', 'Man-Wear-Featured-Items-01.jpg', 'Classic Polo Shirt', '15.00'),
+(2, 'menfeatureitems', 'Man-Wear-Featured-Items-02.jpg', 'Sleeve Raglan Shirt', '19.00'),
+(3, 'menfeatureitems', 'Man-Wear-Featured-Items-03.jpg', 'Athletic Long Shorts', '27.00'),
+(4, 'menfeatureitems', 'Man-Wear-Featured-Items-04.jpg', 'Champion Sweatshirt', '39.00');
 
 -- --------------------------------------------------------
 
@@ -75,6 +171,7 @@ INSERT INTO `menfeatureitems` (`id`, `img`, `name`, `price`) VALUES
 
 CREATE TABLE `mennewarrival` (
   `id` int(11) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'mennewarrival',
   `img` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL
@@ -84,15 +181,38 @@ CREATE TABLE `mennewarrival` (
 -- Dumping data for table `mennewarrival`
 --
 
-INSERT INTO `mennewarrival` (`id`, `img`, `name`, `price`) VALUES
-(1, 'Men-Wear-NewArrival-01.jpg', 'All-Over Print Men\'s Crew Neck T-Shirt', '15.00'),
-(2, 'Men-Wear-NewArrival-02.jpg', 'Men\'s Heavyweight Tee', '12.00'),
-(3, 'Men-Wear-NewArrival-03.jpg', 'Oversized Tie-Dye T-Shirt', '18.00'),
-(4, 'Men-Wear-NewArrival-04.jpg', 'Unisex Tri-Blend T-Shirt', '16.00'),
-(5, 'Men-Wear-NewArrival-05.jpg', 'Unisex Champion Tie-Dye Hoodie', '52.00'),
-(6, 'Men-Wear-NewArrival-06.jpg', 'Unisex Essential Eco Hoodie', '39.00'),
-(7, 'Men-Wear-NewArrival-07.jpg', 'Hoodie | Stanley/Stella STSU824', '36.00'),
-(8, 'Men-Wear-NewArrival-08.jpg', 'Unisex Lightweight Hoodie | District DT571', '25.00');
+INSERT INTO `mennewarrival` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'mennewarrival', 'Men-Wear-NewArrival-01.jpg', 'Crew Neck T-Shirt', '15.00'),
+(2, 'mennewarrival', 'Men-Wear-NewArrival-02.jpg', 'Heavyweight Tee', '12.00'),
+(3, 'mennewarrival', 'Men-Wear-NewArrival-03.jpg', 'Oversized Tie-Dye T-Shirt', '18.00'),
+(4, 'mennewarrival', 'Men-Wear-NewArrival-04.jpg', 'Tri-Blend T-Shirt', '16.00'),
+(5, 'mennewarrival', 'Men-Wear-NewArrival-05.jpg', 'Champion Tie-Dye Hoodie', '52.00'),
+(6, 'mennewarrival', 'Men-Wear-NewArrival-06.jpg', 'Essential Eco Hoodie', '39.00'),
+(8, 'mennewarrival', 'Men-Wear-NewArrival-08.jpg', 'Lightweight Hoodie | District', '25.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `womenfeatureitems`
+--
+
+CREATE TABLE `womenfeatureitems` (
+  `id` int(11) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'womenfeatureitems',
+  `img` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `womenfeatureitems`
+--
+
+INSERT INTO `womenfeatureitems` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'womenfeatureitems', 'dressP2.png', 'Dress', '50.00'),
+(2, 'womenfeatureitems', 'Thoodie.png', 'Drawstring T-shirt', '48.00'),
+(3, 'womenfeatureitems', 'neckT.png', 'Nect T-shirt', '30.00'),
+(4, 'womenfeatureitems', 'pullover.png', 'Pullover', '44.99');
 
 -- --------------------------------------------------------
 
@@ -102,10 +222,25 @@ INSERT INTO `mennewarrival` (`id`, `img`, `name`, `price`) VALUES
 
 CREATE TABLE `womennewarrival` (
   `id` int(11) NOT NULL,
-  `img` int(255) NOT NULL,
-  `name` int(255) NOT NULL,
+  `table` varchar(255) NOT NULL DEFAULT 'womennewarrival',
+  `img` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `womennewarrival`
+--
+
+INSERT INTO `womennewarrival` (`id`, `table`, `img`, `name`, `price`) VALUES
+(1, 'womennewarrival', 'FeatureHoodies.png', 'Eco Hoodie', '25.00'),
+(2, 'womennewarrival', 'Hoodie2.png', 'Eco Hoodie', '25.00'),
+(3, 'womennewarrival', 'WhiteS.png', 'White Sweatshirt', '20.00'),
+(4, 'womennewarrival', 'BlackS.png', 'Black Sweatshirt', '20.00'),
+(5, 'womennewarrival', 'SkaterSkirt.png', 'Skater Skirt', '30.00'),
+(6, 'womennewarrival', 'DressH.png', 'Dress Hoodie', '40.00'),
+(7, 'womennewarrival', 'DressP.png', 'Print Dress', '35.00'),
+(8, 'womennewarrival', 'denimT.png', 'Denim T-Shirt', '12.00');
 
 --
 -- Indexes for dumped tables
@@ -118,6 +253,30 @@ ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `indexfeatureitems`
+--
+ALTER TABLE `indexfeatureitems`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `indexnewarriwal`
+--
+ALTER TABLE `indexnewarriwal`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kidsfeatureitems`
+--
+ALTER TABLE `kidsfeatureitems`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kidsnewarrival`
+--
+ALTER TABLE `kidsnewarrival`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `menfeatureitems`
 --
 ALTER TABLE `menfeatureitems`
@@ -127,6 +286,12 @@ ALTER TABLE `menfeatureitems`
 -- Indexes for table `mennewarrival`
 --
 ALTER TABLE `mennewarrival`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `womenfeatureitems`
+--
+ALTER TABLE `womenfeatureitems`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -143,7 +308,31 @@ ALTER TABLE `womennewarrival`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- AUTO_INCREMENT for table `indexfeatureitems`
+--
+ALTER TABLE `indexfeatureitems`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `indexnewarriwal`
+--
+ALTER TABLE `indexnewarriwal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `kidsfeatureitems`
+--
+ALTER TABLE `kidsfeatureitems`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `kidsnewarrival`
+--
+ALTER TABLE `kidsnewarrival`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `menfeatureitems`
@@ -158,10 +347,16 @@ ALTER TABLE `mennewarrival`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `womenfeatureitems`
+--
+ALTER TABLE `womenfeatureitems`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `womennewarrival`
 --
 ALTER TABLE `womennewarrival`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
