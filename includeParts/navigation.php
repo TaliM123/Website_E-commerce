@@ -21,10 +21,7 @@
             <a href=""><i class="fab fa-twitter"></i></a>
             <a href=""><i class="fab fa-instagram"></i></a>
         </div>
-
     </div>
-
-
 
     <!--Menu-bar---------------------->
     <div class="navigation">
@@ -32,9 +29,8 @@
         <a href="#" class="logo">
             <img src="img/Logo.png" alt="">
         </a>
-        <!--menu-icon-------------->
+        <!--menu-icon--for phones------------>
         <div class="toggle"></div>
-
         <!--menu-->
         <ul class="menu">
             <li><a href="index.php">Home</a></li>
@@ -43,9 +39,14 @@
             <li><a href="Kids.php">Children</a></li>
         </ul>
 
-
         <!--right menu-->
         <div class="right-menu">
+            <!--Log in user-->
+            <?php if (!isset($_SESSION['username'])) { ?>
+                <a href="login.php">
+                    <i class="fa fa-address-book" aria-hidden="true"></i>
+                </a>
+            <?php } ?>
             <!--Admin panel-->
             <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') { ?>
                 <a href="adminpanel.php">
@@ -62,17 +63,20 @@
                 <i class="fas fa-search"></i>
             </a>
             <!--Kart ikon-->
-            <a href="shoppingcart.php">
-                <i class="fas fa-shopping-cart">
-                    <!--Numra e produkteve brenda kartes-->
-                    <span class="num-cart-product">
-                        <?php if ($result = mysqli_query($conn, $sql)) {
-                            $rowcount = mysqli_num_rows($result);
-                            echo $rowcount;
-                        } ?>
-                    </span>
-                </i>
-            </a>
+            <?php if (isset($_SESSION['username'])) : ?>
+                <a href="shoppingcart.php">
+                    <i class="fas fa-shopping-cart">
+                        <!--Numra e produkteve brenda kartes-->
+                        <span class="num-cart-product">
+                            <?php $username = $_SESSION['username'];
+                            if ($result = mysqli_query($conn, "Select * from cart where username = '$username'")) {
+                                $rowcount = mysqli_num_rows($result);
+                                echo $rowcount;
+                            } ?>
+                        </span>
+                    </i>
+                </a>
+            <?php endif ?>
         </div>
     </div>
     <?php
@@ -80,8 +84,7 @@
         foreach ($message as $message) {
             echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
         }
-    }
-    ?>
+    } ?>
 </nav>
 
 <div class="search-bar">

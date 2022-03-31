@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2022 at 07:54 PM
+-- Generation Time: Mar 30, 2022 at 11:11 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -41,7 +41,34 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `username`, `name`, `price`, `img`, `quantity`) VALUES
-(50, 'Tali123', 'White Sweatshirt', '20.00', 'WhiteS.png', '1');
+(54, '', 'Sweatshirt', '40.00', 'Man-Wear-Featured-Items-04.jpg', '1'),
+(55, '', 'Oversized Tie-Dye T-Shirt', '18.00', 'Men-Wear-NewArrival-03.jpg', '1'),
+(58, '', 'Dress', '25.00', 'DressP.png', '1'),
+(59, 'Tali123', 'White Sweatshirt', '20.00', 'WhiteS.png', '1'),
+(61, 'Tali123', 'Skater Skirt', '30.00', 'SkaterSkirt.png', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `indexfeaturecategories`
+--
+
+CREATE TABLE `indexfeaturecategories` (
+  `id` int(11) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `indexfeaturecategories`
+--
+
+INSERT INTO `indexfeaturecategories` (`id`, `img`, `name`) VALUES
+(1, 'Men-Wear-NewArrival-01.jpg', 'Men'),
+(2, 'WhiteS.png', 'Women'),
+(3, 'ecohoodie.png', 'Children'),
+(4, 'Man-Wear-Sale-03.jpg', 'Trousers'),
+(5, 'FeatureSkirts.png', 'Skirts');
 
 -- --------------------------------------------------------
 
@@ -193,6 +220,29 @@ INSERT INTO `mennewarrival` (`id`, `table`, `img`, `name`, `price`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `user_type` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `user_type`) VALUES
+(1, 'Tali123', 'keyazdestroyer@gmail.com', 'caea2cb5019473ae10042518c7f5fc23', 'admin'),
+(3, 'Tali12345', 'asdasd@asdasd.com', 'caea2cb5019473ae10042518c7f5fc23', 'user'),
+(5, 'Taulant123123', 'asd@as.com', 'caea2cb5019473ae10042518c7f5fc23', 'user');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `womenfeatureitems`
 --
 
@@ -253,6 +303,12 @@ ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `indexfeaturecategories`
+--
+ALTER TABLE `indexfeaturecategories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `indexfeatureitems`
 --
 ALTER TABLE `indexfeatureitems`
@@ -289,6 +345,12 @@ ALTER TABLE `mennewarrival`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `womenfeatureitems`
 --
 ALTER TABLE `womenfeatureitems`
@@ -308,43 +370,55 @@ ALTER TABLE `womennewarrival`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT for table `indexfeaturecategories`
+--
+ALTER TABLE `indexfeaturecategories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `indexfeatureitems`
 --
 ALTER TABLE `indexfeatureitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `indexnewarriwal`
 --
 ALTER TABLE `indexnewarriwal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `kidsfeatureitems`
 --
 ALTER TABLE `kidsfeatureitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `kidsnewarrival`
 --
 ALTER TABLE `kidsnewarrival`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `menfeatureitems`
 --
 ALTER TABLE `menfeatureitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `mennewarrival`
 --
 ALTER TABLE `mennewarrival`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `womenfeatureitems`

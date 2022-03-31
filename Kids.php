@@ -1,6 +1,4 @@
-<?php
-include('./includeParts/phpcommands.php');
-?>
+<?php include('./includeParts/phpcommands.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,16 +26,12 @@ include('./includeParts/phpcommands.php');
     <div class="header-title kids">
         <h2>Children's Clothing</h2>
     </div>
-
     <!-----------------------------------New-Arrival------------------------------------------->
-
     <section class="new-arrival">
         <!--heading----->
         <div class="arrival-heading">
-
             <strong>New Arrival</strong>
             <p>We provide you new design fashion clothes</p>
-
         </div>
         <!---product-container-->
         <div class="product-container">
@@ -47,52 +41,28 @@ include('./includeParts/phpcommands.php');
     </section>
 
     <!----------------------------------------Sale----------------------------------------------->
-
     <section class="sale">
         <!-----sale-box-->
         <div class="sale-box">
             <!---img-->
             <img src="img/kidsH.png" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong>White Hoodie</strong>
-                    <span>Sale off 20%</span>
-                </div>
-            </a>
         </div>
         <!-----sale-box-2-->
         <div class="sale-box">
             <!---img-->
             <img src="img/jacketK.png" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong></strong>
-                    <span></span>
-                </div>
-            </a>
         </div>
         <!-----sale-box-3-->
         <div class="sale-box">
             <!---img-->
             <img src="img/KidsTshirt2.png" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong></strong>
-                    <span></span>
-                </div>
-            </a>
         </div>
         <!--new-arrival----------------->
         <section class="new-arrival">
             <!--heading----->
             <div class="arrival-heading">
-
                 <strong>feature Items</strong>
                 <p>We provide you new design fashion clothes</p>
-
             </div>
             <!---product-container-->
             <div class="product-container">
@@ -106,9 +76,6 @@ include('./includeParts/phpcommands.php');
     </section>
     <!-------------------------------------------Footer----------------------------------------------->
     <?php include './includeParts/footer.php' ?>
-
-    <!--Script------>
-    <script src="js/scipt.js"></script>
 
 </body>
 

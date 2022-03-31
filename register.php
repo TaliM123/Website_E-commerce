@@ -1,5 +1,4 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
+<?php if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 if (!isset($username)) {
@@ -11,8 +10,7 @@ if (!isset($email)) {
 if (isset($_SESSION['username'])) {
     $message[] = "You are already have an account";
     header('location: index.php');
-}
-?>
+} ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,9 +49,9 @@ if (isset($_SESSION['username'])) {
             </a>
             <!--menu-icon-------------->
             <div class="toggle"></div>
-
             <!--menu-->
             <ul class="menu" style="margin-right: 20px;">
+                <li><a href="index.php">Home</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
             </ul>
@@ -62,6 +60,7 @@ if (isset($_SESSION['username'])) {
                 <a><i></i></a><a><i></i></a>
             </div>
         </div>
+        <!--Message from phpcommands-->
         <?php
         if (isset($message)) {
             foreach ($message as $message) {
@@ -96,7 +95,6 @@ if (isset($_SESSION['username'])) {
             <!--butoni-forget-dhe-sign-up-->
             <div class="form-buttons">
                 <a href="login.php" class="already-account">Already have an account?</a>
-
             </div>
         </div>
     </div>

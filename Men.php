@@ -1,6 +1,4 @@
-<?php
-include('./includeParts/phpcommands.php');
-?>
+<?php include('./includeParts/phpcommands.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,20 +23,15 @@ include('./includeParts/phpcommands.php');
     <?php include './includeParts/navigation.php' ?>
 
     <!------------------------------------------Header Title--------------------------------->
-
     <div class="header-title man">
         <h2>Men's Clothing</h2>
     </div>
-
     <!-----------------------------------New-Arrival------------------------------------------->
-
     <section class="new-arrival">
         <!--heading----->
         <div class="arrival-heading">
-
             <strong>New Arrival</strong>
             <p>We provide you new design fashion clothes</p>
-
         </div>
         <!---product-container-->
         <div class="product-container">
@@ -46,58 +39,29 @@ include('./includeParts/phpcommands.php');
             include('includeParts/products.php'); ?>
         </div>
     </section>
-
     <!----------------------------------------Sale----------------------------------------------->
-
     <section class="sale">
         <!-----sale-box-->
         <div class="sale-box">
             <!---img-->
             <img src="img/Man-Wear-Sale-01.jpg" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong>Sweatpants | Cotton Heritage M7580</strong>
-                    <span>Sale off 15%</span>
-                </div>
-            </a>
         </div>
         <!-----sale-box-2-->
         <div class="sale-box">
             <!---img-->
             <img src="img/Man-Wear-Sale-02.jpg" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong>Unisex Joggers | Jerzees 975MPR</strong>
-                    <span>Sale off 25%</span>
-                </div>
-            </a>
         </div>
         <!-----sale-box-3-->
         <div class="sale-box">
             <!---img-->
             <img src="img/Man-Wear-Sale-03.jpg" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong>All-Over Print Men's Joggers</strong>
-                    <span>Sale off 20%</span>
-                </div>
-            </a>
         </div>
-
         <!-------------------------new-arrival-------------------------------------------------->
-
-        <!---------------------------------------------------------------------------------------->
-
         <section class="new-arrival">
             <!--heading----->
             <div class="arrival-heading">
-
                 <strong>feature Items</strong>
                 <p>We provide you with the best fashion clothes</p>
-
             </div>
             <!---product-container-->
             <div class="product-container">
@@ -112,9 +76,6 @@ include('./includeParts/phpcommands.php');
     </section>
     <!-------------------------------------------Footer----------------------------------------------->
     <?php include './includeParts/footer.php' ?>
-
-    <!--Script------>
-    <script src="js/scipt.js"></script>
 
 </body>
 

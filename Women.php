@@ -1,6 +1,4 @@
-<?php
-include('./includeParts/phpcommands.php');
-?>
+<?php include('./includeParts/phpcommands.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +12,6 @@ include('./includeParts/phpcommands.php');
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--JQuery--------->
     <script src="js/jQuery.js"></script>
-
     <!--Ikona ne titullin e webit-->
     <link rel="shortcut icon" href="img/Ikona-logo.png" />
     <!--FontAwesome-->
@@ -26,21 +23,16 @@ include('./includeParts/phpcommands.php');
     <?php include './includeParts/navigation.php' ?>
 
     <!------------------------------------------Kategorite Featured--------------------------------->
-
     <div class="header-title women">
         <h2>Women's Clothing</h2>
     </div>
 
-
     <!-----------------------------------New-Arrival------------------------------------------->
-
     <section class="new-arrival">
         <!--heading----->
         <div class="arrival-heading">
-
             <strong>New Arrival</strong>
             <p>We provide you the best fashion clothes</p>
-
         </div>
         <!---product-container-->
         <div class="product-container">
@@ -50,52 +42,28 @@ include('./includeParts/phpcommands.php');
     </section>
 
     <!----------------------------------------Sale----------------------------------------------->
-
     <section class="sale">
         <!-----sale-box-->
         <div class="sale-box">
             <!---img-->
             <img src="img/FeatureDresses.png" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong>White Dress</strong>
-                    <span>Sale off 15%</span>
-                </div>
-            </a>
         </div>
         <!-----sale-box-2-->
         <div class="sale-box">
             <!---img-->
             <img src="img/FeatureSweatshirts.png" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong>Black Sweater</strong>
-                    <span>Sale off 20%</span>
-                </div>
-            </a>
         </div>
         <!-----sale-box-3-->
         <div class="sale-box">
             <!---img-->
             <img src="img/FeatureTshirts.png" />
-            <!---text-->
-            <a href="#">
-                <div class="sale-text">
-                    <strong>Black <br>T-shirt</strong>
-                    <span>Sale off 17%</span>
-                </div>
-            </a>
         </div>
         <!--new-arrival----------------->
         <section class="new-arrival">
             <!--heading----->
             <div class="arrival-heading">
-
                 <strong>feature Items</strong>
                 <p>We provide you new design fashion clothes</p>
-
             </div>
             <!---product-container-->
             <div class="product-container">
@@ -118,9 +86,6 @@ include('./includeParts/phpcommands.php');
     </section>
     <!-------------------------------------------Footer----------------------------------------------->
     <?php include './includeParts/footer.php' ?>
-
-    <!--Script------>
-    <script src="js/scipt.js"></script>
 
 </body>
 

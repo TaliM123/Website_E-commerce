@@ -1,8 +1,7 @@
-<?php
-include('./includeParts/phpcommands.php');
-
-
-?>
+<?php include('./includeParts/phpcommands.php');
+if (!isset($_SESSION['username'])) {
+    header('location: login.php');
+}?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,8 +45,7 @@ include('./includeParts/phpcommands.php');
                     $cart_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE username = '$username'") or die('query failed');
                     $grand_total = 0;
                     if (mysqli_num_rows($cart_query) > 0) {
-                        while ($fetch_cart = mysqli_fetch_assoc($cart_query)) {
-                    ?>
+                        while ($fetch_cart = mysqli_fetch_assoc($cart_query)) { ?>
                             <tr>
                                 <td><img src="img/<?php echo $fetch_cart['img']; ?>" height="100" alt=""></td>
                                 <td><?php echo $fetch_cart['name']; ?></td>
@@ -62,13 +60,12 @@ include('./includeParts/phpcommands.php');
                                 <td>$<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></td>
                                 <td><a href="shoppingcart.php?remove=<?php echo $fetch_cart['id']; ?>" class="delete-btn" onclick="return confirm('remove item from cart?');">remove</a></td>
                             </tr>
-                    <?php
+                    <?php //Kalkulimi i totalit te qmimit ne shop kart
                             $grand_total += $sub_total;
                         }
                     } else {
                         echo '<tr><td style="padding:20px; text-transform:capitalize;" colspan="6">no item added</td></tr>';
-                    }
-                    ?>
+                    } ?>
                     <tr class="table-bottom">
                         <td colspan="4">Grand Total :</td>
                         <td>$<?php echo $grand_total; ?></td>
@@ -82,8 +79,6 @@ include('./includeParts/phpcommands.php');
     <!-------------------------------------------Footer----------------------------------------------->
     <?php include './includeParts/footer.php' ?>
 
-    <!--Script------>
-    <script src="js/scipt.js"></script>
 </body>
 
 </html>

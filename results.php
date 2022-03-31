@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = mysqli_connect('localhost', 'root', '', 'shop_db');
 //Register form
 if (isset($_POST['reg_user'])) {
     $username = $_POST['username'];

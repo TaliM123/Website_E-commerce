@@ -26,7 +26,17 @@ $(document).ready(function () {
 })
 
 /*Pop up for registering and log in*/
-function successfulRegister()
-{
-alert("Thanks for Registering with Us!");
+function successfulRegister() {
+    alert("Thanks for Registering with Us!");
 }
+/*Check if at least one checkbox in adminpanel is checked*/
+$(document).ready(function(){
+    var checkboxes = $('.checkboxes');
+    checkboxes.change(function(){
+        if($('.checkboxes:checked').length>0) {
+            checkboxes.removeAttr('required');
+        } else {
+            checkboxes.attr('required', 'required');
+        }
+    });
+});

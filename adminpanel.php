@@ -1,9 +1,7 @@
-<?php
-include('./includeParts/phpcommands.php');
-if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
+<?php include('./includeParts/phpcommands.php');
+if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] == 'user') {
     header('location: index.php');
-}
-?>
+} ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,17 +30,17 @@ if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
         <div class="adminpanel_header">
             <h2>All Users</h2>
         </div>
-        <div>
-            <table>
+        <div class="user-div">
+            <table class="users">
                 <thead>
                     <th>id</th>
                     <th>username</th>
                     <th>email</th>
                     <th>user type</th>
-                    <th>action</th>
+                    <th colspan="2">action</th>
                 </thead>
                 <tbody>
-                    <?php $reg_users = mysqli_query($connadmin, "SELECT * FROM `users`") or die('query failed');
+                    <?php $reg_users = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
                     if (mysqli_num_rows($reg_users) > 0) {
                         while ($fetch_users = mysqli_fetch_assoc($reg_users)) { ?>
                             <tr>
@@ -84,7 +82,14 @@ if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
                             <form action="" method="post">
                                 <td><input type="hidden" name="user_id" value="<?php echo $_POST['user_id']; ?>"><?php echo $_POST['user_id']; ?></td>
                                 <td><input type="text" name="user_name" value="<?php echo $_POST['user_name']; ?>"></td>
-                                <td><input type="text" name="user_type" value="<?php echo $_POST['user_type']; ?>"></td>
+                                <td><select name="user_type">
+                                        <option value="<?php echo $_POST['user_type']; ?>"><?php echo $_POST['user_type']; ?></option>
+                                        <?php if ($_POST['user_type'] == 'user') { ?>
+                                            <option value="admin">admin</option> <?php } ?>
+                                        <?php if ($_POST['user_type'] == 'admin') { ?>
+                                            <option value="user">user</option> <?php } ?>
+                                    </select>
+                                </td>
                                 <td><input type="submit" class="updatecart" name="update_user" value="save "></td>
                             </form>
                         </tr>
@@ -106,42 +111,42 @@ if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
                     <th>Table</th>
                 </thead>
                 <tbody>
-                    <form action="" method="POST">
+                    <form action="adminpanel.php" method="POST" enctype="multipart/form-data">
                         <tr>
-                            <td><input type="file"></td>
-                            <td><input type="text" class="inputbox"></td>
-                            <td><input type="number" class="inputbox price"></td>
+                            <td><input type="file" name="image"></td>
+                            <td><input type="text" name="name" class="inputbox"></td>
+                            <td><input type="number" step="0.01" name="price" class="inputbox price"></td>
                             <td>
                                 <ul>
-                                    <li><input type="checkbox" name="ifi" value="indexfeatureitems">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="indexfeatureitems" required>
                                         <label for="ifi">Index Feature Items</label>
                                     </li>
-                                    <li><input type="checkbox" name="ina" value="indexnewarriwal">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="indexnewarriwal" required>
                                         <label for="ina">Index New Arrival</label>
                                     </li>
-                                    <li><input type="checkbox" name="kfi" value="kidsfeatureitems">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="kidsfeatureitems" required>
                                         <label for="kfi">Kids Feature Items</label>
                                     </li>
-                                    <li><input type="checkbox" name="kna" value="kidsnewarrival">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="kidsnewarrival" required>
                                         <label for="kna">Kids New Arrival</label>
                                     </li>
-                                    <li><input type="checkbox" name="mfi" value="menfeatureitems">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="menfeatureitems" required>
                                         <label for="mfi">Man Feature Items</label>
                                     </li>
-                                    <li><input type="checkbox" name="mna" value="mennewarrival">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="mennewarrival" required>
                                         <label for="mna">Man New Arrival</label>
                                     </li>
-                                    <li><input type="checkbox" name="wfi" value="womenfeatureitems">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="womenfeatureitems" required>
                                         <label for="wfi">Women Feature Items</label>
                                     </li>
-                                    <li><input type="checkbox" name="wna" value="womennewarrival">
+                                    <li><input type="checkbox" class="checkboxes" name="table[]" value="womennewarrival" required>
                                         <label for="wna">Women New Arrival</label>
                                     </li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="4" id="add-product"><input type="submit" name="addproduct" class="updatecart" value="Add Product"></td>
+                            <td colspan="4" id="add-product"><input type="submit" name="addproduct" id="checkBtn" class="updatecart" value="Add Product"></td>
                         </tr>
                     </form>
                 </tbody>
@@ -153,9 +158,6 @@ if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
 
     <!-------------------------------------------Footer----------------------------------------------->
     <?php include './includeParts/footer.php' ?>
-
-    <!--Script------>
-    <script src="js/scipt.js"></script>
 
 </body>
 

@@ -2,7 +2,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
 if (isset($_SESSION['username'])) {
     $message[] = "You are already logged in";
     header('location: index.php');
@@ -49,6 +48,7 @@ if (isset($_SESSION['username'])) {
 
             <!--menu-->
             <ul class="menu" style="margin-right: 20px;">
+                <li><a href="index.php">Home</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
             </ul>
@@ -57,13 +57,11 @@ if (isset($_SESSION['username'])) {
                 <a><i></i></a><a><i></i></a>
             </div>
         </div>
-        <?php
-        if (isset($message)) {
+        <?php if (isset($message)) {
             foreach ($message as $message) {
                 echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
             }
-        }
-        ?>
+        } ?>
     </nav>
     <br>
     <div class="form">
@@ -86,7 +84,6 @@ if (isset($_SESSION['username'])) {
             </form>
             <!--butoni-forget-dhe-sign-up-->
             <div class="form-buttons">
-                <a href="#" class="forget">Forgot your password?</a>
                 <a href="register.php" class="sign-up-btn">Create account</a>
             </div>
         </div>
